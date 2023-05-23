@@ -1,7 +1,7 @@
 import kotlin.system.measureTimeMillis
 
 fun main(args: Array<String>) {
-    println("Hello, welcome to the sort Algorithms!")
+    println("Hello, welcome to the Kotlin sort algorithms!")
     println("Select the algorithm that you want to test below: ")
     println(
         "1 - Bubble Sort\n" +
@@ -22,7 +22,7 @@ fun main(args: Array<String>) {
             }
 
             1 -> {
-                println("\nYou've selected the Bubble Sort Algorithm, now you'll insert the size and the numbers of the list")
+                println("\nYou've selected the Bubble Sort Algorithm")
                 bubbleSortSelected()
 
             }
@@ -43,7 +43,7 @@ fun main(args: Array<String>) {
             }
 
             5 -> {
-                println("\nYou've selected the Quick Sort Algorithm, please enter the list of numbers that you want to sort:")
+                println("\nYou've selected the Quick Sort Algorithm")
                 quickSortSelected()
             }
 
@@ -86,13 +86,16 @@ fun mergeSortSelected() {
 }
 
 fun quickSortSelected() {
+    print("Please enter the list of numbers that you want to sort separated by spaces: ")
 
+    val input = readLine()!!
+    val array = input.split(" ").map { it.toInt() }.toIntArray()
+
+    quickSort(array, 0, array.size-1)
+
+    println("\nSorted array: ${array.joinToString(" ")}")
 }
 
 fun selectionSortSelected() {
-
-}
-
-fun exitSelected() {
 
 }
