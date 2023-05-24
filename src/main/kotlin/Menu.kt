@@ -70,7 +70,8 @@ fun bubbleSortSelected() {
         numbers[i] = number
     }
 
-    bubbleSort(numbers)
+    val result = bubbleSort(numbers)
+    printArray(result)
 }
 
 fun heapSortSelected() {
@@ -89,7 +90,8 @@ fun insertionSortSelected() {
         numbers[i] = number
     }
 
-    insertionSort(numbers)
+    val result = insertionSort(numbers)
+    printArray(result)
 }
 
 fun mergeSortSelected() {
@@ -104,8 +106,8 @@ fun mergeSortSelected() {
         numbers[i] = number
     }
 
-    mergeSort(numbers)
-    printArray(numbers)
+    val result = mergeSort(numbers)
+    printArray(result)
 }
 
 fun quickSortSelected() {
@@ -131,5 +133,6 @@ fun selectionSortSelected() {
         numbers[i] = number
     }
 
-    selectionSort(numbers)
+    val result = selectionSort(numbers)
+    printArray(result)
 }

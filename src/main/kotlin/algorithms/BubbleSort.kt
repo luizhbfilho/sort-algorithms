@@ -1,14 +1,14 @@
 import utils.printArray
 
-fun bubbleSort(arr: IntArray) {
-    val n = arr.size
+fun bubbleSort(array: IntArray): IntArray {
+    val n = array.size
     for (i in 0 until n - 1)
         for (j in 0 until n - i - 1)
-            if (arr[j] > arr[j + 1]) {
-                val temp = arr[j]
-                arr[j] = arr[j + 1]
-                arr[j + 1] = temp
+            if (array[j] > array[j + 1]) {
+                val temp = array[j]
+                array[j] = array[j + 1]
+                array[j + 1] = temp
             }
-    printArray(arr)
+    return array
 }
 

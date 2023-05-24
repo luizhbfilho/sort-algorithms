@@ -1,6 +1,4 @@
-import utils.printArray
-
-fun selectionSort(array: IntArray) {
+fun selectionSort(array: IntArray): IntArray {
     for (i in 0 until array.size - 1) {
         var minIndex = i
         for (j in i + 1 until array.size) {
@@ -13,5 +11,5 @@ fun selectionSort(array: IntArray) {
         array[minIndex] = temp
     }
 
-    printArray(array)
+    return array
 }

@@ -1,9 +1,6 @@
-import utils.printArray
-
-fun insertionSort(array: IntArray) {
+fun insertionSort(array: IntArray): IntArray {
     for (i in 1 until array.size) {
         val key = array[i]
-
         var j = i -1
 
         while (j >= 0 && array[j] > key) {
@@ -14,5 +11,5 @@ fun insertionSort(array: IntArray) {
         array[j + 1] = key
     }
 
-    printArray(array)
+    return array
 }
