@@ -1,3 +1,5 @@
+import utils.printArray
+
 fun bubbleSort(arr: IntArray) {
     val n = arr.size
     for (i in 0 until n - 1)
@@ -10,10 +12,3 @@ fun bubbleSort(arr: IntArray) {
     printArray(arr)
 }
 
-fun printArray(arr: IntArray) {
-    print("The sorted list is: ")
-    for (item in arr) {
-        print("$item ")
-    }
-    println()
-}
