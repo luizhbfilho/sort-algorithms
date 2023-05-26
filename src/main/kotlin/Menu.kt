@@ -1,3 +1,4 @@
+import utils.arrayInput
 import utils.printArray
 
 fun menu() {
@@ -59,17 +60,7 @@ fun menu() {
 }
 
 fun bubbleSortSelected() {
-    print("Enter the size of the list: ")
-    val size = readLine()?.toIntOrNull() ?: 0
-
-    val numbers = IntArray(size)
-
-    for (i in numbers.indices) {
-        print("Enter number at index $i: ")
-        val number = readLine()?.toIntOrNull() ?: 0
-        numbers[i] = number
-    }
-
+    val numbers = arrayInput()
     val result = bubbleSort(numbers)
     printArray(result)
 }
@@ -79,33 +70,13 @@ fun heapSortSelected() {
 }
 
 fun insertionSortSelected() {
-    print("Enter the size of the list: ")
-    val size = readLine()?.toIntOrNull() ?: 0
-
-    val numbers = IntArray(size)
-
-    for (i in numbers.indices) {
-        print("Enter number at index $i: ")
-        val number = readLine()?.toIntOrNull() ?: 0
-        numbers[i] = number
-    }
-
+    val numbers = arrayInput()
     val result = insertionSort(numbers)
     printArray(result)
 }
 
 fun mergeSortSelected() {
-    print("Enter the size of the list: ")
-    val size = readLine()?.toIntOrNull() ?: 0
-
-    val numbers = IntArray(size)
-
-    for (i in numbers.indices) {
-        print("Enter number at index $i: ")
-        val number = readLine()?.toIntOrNull() ?: 0
-        numbers[i] = number
-    }
-
+    val numbers = arrayInput()
     val result = mergeSort(numbers)
     printArray(result)
 }
@@ -122,17 +93,7 @@ fun quickSortSelected() {
 }
 
 fun selectionSortSelected() {
-    print("Enter the size of the list: ")
-    val size = readLine()?.toIntOrNull() ?: 0
-
-    val numbers = IntArray(size)
-
-    for (i in numbers.indices) {
-        print("Enter number at index $i: ")
-        val number = readLine()?.toIntOrNull() ?: 0
-        numbers[i] = number
-    }
-
+    val numbers = arrayInput()
     val result = selectionSort(numbers)
     printArray(result)
 }
