@@ -66,7 +66,9 @@ fun bubbleSortSelected() {
 }
 
 fun heapSortSelected() {
-
+    val numbers = arrayInput()
+    val result = heapSort(numbers)
+    printArray(result)
 }
 
 fun insertionSortSelected() {
