@@ -1,4 +1,4 @@
-fun partition(array: IntArray, low: Int, high: Int): Int {
+private fun partition(array: IntArray, low: Int, high: Int): Int {
     val pivot = array[high]
     var i = low - 1
     for (j in low until high) {
@@ -18,12 +18,14 @@ fun partition(array: IntArray, low: Int, high: Int): Int {
     return i+1
 }
 
-fun quickSort(array: IntArray, low: Int, high: Int) {
+fun quickSort(array: IntArray, low: Int, high: Int): IntArray {
     if (low < high) {
         val pi = partition(array, low, high)
         quickSort(array, low, pi-1)
         quickSort(array, pi+1, high)
     }
+
+    return array
 }
 
 

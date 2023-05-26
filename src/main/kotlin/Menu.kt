@@ -79,7 +79,8 @@ fun insertionSortSelected() {
 
 fun mergeSortSelected() {
     val numbers = arrayInput()
-    val result = mergeSort(numbers)
+    val mergeSort = MergeSortAlgorithm()
+    val result = mergeSort.mergeSort(numbers)
     printArray(result)
 }
 

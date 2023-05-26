@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HeapSortTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-05-26T18:22:15" hostname="LUIZINHO-PC" time="0.017">
+<testsuite name="HeapSortTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-05-26T18:31:02" hostname="LUIZINHO-PC" time="0.018">
   <properties/>
-  <testcase name="heap sort with negative numbers test()" classname="HeapSortTest" time="0.015"/>
+  <testcase name="heap sort with negative numbers test()" classname="HeapSortTest" time="0.014"/>
   <testcase name="heap sort with empty array test()" classname="HeapSortTest" time="0.001"/>
-  <testcase name="heap sort with all equal elements test()" classname="HeapSortTest" time="0.0"/>
-  <testcase name="heap sort test()" classname="HeapSortTest" time="0.0"/>
+  <testcase name="heap sort with all equal elements test()" classname="HeapSortTest" time="0.001"/>
+  <testcase name="heap sort test()" classname="HeapSortTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
