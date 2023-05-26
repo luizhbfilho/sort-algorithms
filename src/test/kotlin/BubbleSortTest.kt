@@ -1,15 +1,44 @@
-import kotlin.test.Test
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
 
 class BubbleSortTest {
 
     @Test
-    fun testBubbleSort() {
-        val array = intArrayOf(10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
-        val expected = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    fun `Given an unsorted array, when bubbleSort is called, then it should return a sorted array`() {
+        // Arrange
+        val array = intArrayOf(5, 3, 8, 1, 2)
+        val expectedArray = intArrayOf(1, 2, 3, 5, 8)
 
-        val actual = bubbleSort(array)
+        // Act
+        val sortedArray = bubbleSort(array)
 
-        assertEquals(expected, actual)
+        // Assert
+        assertArrayEquals(expectedArray, sortedArray)
+    }
+
+    @Test
+    fun `Given an empty array, when bubbleSort is called, then it should return an empty array`() {
+        // Arrange
+        val array = intArrayOf()
+        val expectedArray = intArrayOf()
+
+        // Act
+        val sortedArray = bubbleSort(array)
+
+        // Assert
+        assertArrayEquals(expectedArray, sortedArray)
+    }
+
+    @Test
+    fun `Given an array with a single element, when bubbleSort is called, then it should return the same array`() {
+        // Arrange
+        val array = intArrayOf(1)
+        val expectedArray = intArrayOf(1)
+
+        // Act
+        val sortedArray = bubbleSort(array)
+
+        // Assert
+        assertArrayEquals(expectedArray, sortedArray)
     }
 }
