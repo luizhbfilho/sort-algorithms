@@ -1,6 +1,8 @@
-class BubbleSortAlgorithm {
+import algorithms.SortAlgorithm
 
-    fun bubbleSort(array: IntArray): IntArray {
+class BubbleSortAlgorithm: SortAlgorithm {
+
+    override fun sort(array: IntArray): IntArray {
         val n = array.size
 
         if (n <= 1) {

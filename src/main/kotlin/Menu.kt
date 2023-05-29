@@ -1,4 +1,5 @@
 import utils.arrayInput
+import utils.executeAlgorithm
 import utils.printArray
 
 fun menu() {
@@ -25,75 +26,38 @@ fun menu() {
 
             1 -> {
                 println("\nYou've selected the Bubble Sort Algorithm")
-                bubbleSortSelected()
-
+                executeAlgorithm(BubbleSortAlgorithm())
             }
 
             2 -> {
                 println("\nYou've selected the Heap Sort Algorithm, please enter the list of numbers that you want to sort:")
-                heapSortSelected()
+                executeAlgorithm(HeapSortAlgorithm())
             }
 
             3 -> {
                 println("\nYou've selected the Insertion Sort Algorithm, please enter the list of numbers that you want to sort:")
-                insertionSortSelected()
+                executeAlgorithm(InsertionSortAlgorithm())
             }
 
             4 -> {
                 println("\nYou've selected the Merge Sort Algorithm, please enter the list of numbers that you want to sort:")
-                mergeSortSelected()
+                executeAlgorithm(MergeSortAlgorithm())
             }
 
             5 -> {
                 println("\nYou've selected the Quick Sort Algorithm")
-                quickSortSelected()
+                val numbers = arrayInput()
+                val algorithm = QuickSortAlgorithm()
+                val result = algorithm.quickSort(numbers, 0, numbers.size - 1)
+                printArray(result)
             }
 
             6 -> {
                 println("\nYou've selected the Selection Sort Algorithm, please enter the list of numbers that you want to sort:")
-                selectionSortSelected()
+                executeAlgorithm(SelectionSortAlgorithm())
             }
         }
     } else {
         println("\nPlease enter a number between 0 and 6, run the program again!")
     }
-}
-
-fun bubbleSortSelected() {
-    val numbers = arrayInput()
-    val algorithm = BubbleSortAlgorithm()
-    val result = algorithm.bubbleSort(numbers)
-    printArray(result)
-}
-
-fun heapSortSelected() {
-    val numbers = arrayInput()
-    val result = heapSort(numbers)
-    printArray(result)
-}
-
-fun insertionSortSelected() {
-    val numbers = arrayInput()
-    val result = insertionSort(numbers)
-    printArray(result)
-}
-
-fun mergeSortSelected() {
-    val numbers = arrayInput()
-    val algorithm = MergeSortAlgorithm()
-    val result = algorithm.mergeSort(numbers)
-    printArray(result)
-}
-
-fun quickSortSelected() {
-    val numbers = arrayInput()
-    val algorithm = QuickSortAlgorithm()
-    val result = algorithm.quickSort(numbers, 0, numbers.size - 1)
-    printArray(result)
-}
-
-fun selectionSortSelected() {
-    val numbers = arrayInput()
-    val result = selectionSort(numbers)
-    printArray(result)
 }

@@ -1,5 +1,7 @@
-class MergeSortAlgorithm {
-    fun mergeSort(array: IntArray): IntArray {
+import algorithms.SortAlgorithm
+
+class MergeSortAlgorithm: SortAlgorithm {
+    override fun sort(array: IntArray): IntArray {
         // Base case: if the array has only one element, return it.
         if (array.size <= 1) {
             return array
@@ -11,8 +13,8 @@ class MergeSortAlgorithm {
         val right = array.copyOfRange(mid, array.size)
 
         // Recursively sort the two halves.
-        val sortedLeft = mergeSort(left)
-        val sortedRight = mergeSort(right)
+        val sortedLeft = sort(left)
+        val sortedRight = sort(right)
 
         // Merge the two sorted halves.
         return merge(sortedLeft, sortedRight)

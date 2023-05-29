@@ -1,5 +1,7 @@
 package utils
 
+import algorithms.SortAlgorithm
+
 fun printArray(arr: IntArray) {
     print("The sorted list is: ")
     for (item in arr) {
@@ -21,4 +23,10 @@ fun arrayInput(): IntArray {
     }
 
     return numbers
+}
+
+fun executeAlgorithm(algorithm: SortAlgorithm) {
+    val numbers = arrayInput()
+    val result = algorithm.sort(numbers)
+    printArray(result)
 }

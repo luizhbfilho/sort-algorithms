@@ -10,7 +10,8 @@ class BubbleSortTest {
         val expectedArray = intArrayOf(1, 2, 3, 5, 8)
 
         // Act
-        val sortedArray = bubbleSort(array)
+        val algorithm = BubbleSortAlgorithm()
+        val sortedArray = algorithm.sort(array)
 
         // Assert
         assertArrayEquals(expectedArray, sortedArray)
@@ -23,7 +24,8 @@ class BubbleSortTest {
         val expectedArray = intArrayOf()
 
         // Act
-        val sortedArray = bubbleSort(array)
+        val algorithm = BubbleSortAlgorithm()
+        val sortedArray = algorithm.sort(array)
 
         // Assert
         assertArrayEquals(expectedArray, sortedArray)
@@ -36,7 +38,8 @@ class BubbleSortTest {
         val expectedArray = intArrayOf(1)
 
         // Act
-        val sortedArray = bubbleSort(array)
+        val algorithm = BubbleSortAlgorithm()
+        val sortedArray = algorithm.sort(array)
 
         // Assert
         assertArrayEquals(expectedArray, sortedArray)

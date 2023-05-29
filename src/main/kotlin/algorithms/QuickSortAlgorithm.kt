@@ -1,4 +1,21 @@
+import algorithms.SortAlgorithm
+
 class QuickSortAlgorithm {
+
+    fun quickSort(array: IntArray, low: Int, high: Int): IntArray {
+        // Check whether the provided range is valid.
+        if (low < high) {
+            val pi = partition(array, low, high)
+
+            // Then, recursively sort the two sub-arrays around the pivot:
+            // one from `low` to `pi-1` (all elements less than the pivot)
+            // and one from `pi+1` to `high` (all elements greater than the pivot).
+            quickSort(array, low, pi-1)
+            quickSort(array, pi+1, high)
+        }
+
+        return array
+    }
 
     // Helper function to partition the array into two parts based on the pivot element.
     private fun partition(array: IntArray, low: Int, high: Int): Int {
@@ -22,21 +39,6 @@ class QuickSortAlgorithm {
         array[high] = temp
 
         return i+1
-    }
-
-    fun quickSort(array: IntArray, low: Int, high: Int): IntArray {
-        // Check whether the provided range is valid.
-        if (low < high) {
-            val pi = partition(array, low, high)
-
-            // Then, recursively sort the two sub-arrays around the pivot:
-            // one from `low` to `pi-1` (all elements less than the pivot)
-            // and one from `pi+1` to `high` (all elements greater than the pivot).
-            quickSort(array, low, pi-1)
-            quickSort(array, pi+1, high)
-        }
-
-        return array
     }
 }
 
