@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="QuickSortTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-05-29T12:53:15" hostname="LUIZINHO-PC" time="0.016">
+  <properties/>
+  <testcase name="testQuickSortWithEmptyArray()" classname="QuickSortTest" time="0.015"/>
+  <testcase name="testQuickSort()" classname="QuickSortTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

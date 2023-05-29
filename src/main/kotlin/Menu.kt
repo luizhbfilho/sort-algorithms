@@ -61,7 +61,8 @@ fun menu() {
 
 fun bubbleSortSelected() {
     val numbers = arrayInput()
-    val result = bubbleSort(numbers)
+    val algorithm = BubbleSortAlgorithm()
+    val result = algorithm.bubbleSort(numbers)
     printArray(result)
 }
 
@@ -79,20 +80,16 @@ fun insertionSortSelected() {
 
 fun mergeSortSelected() {
     val numbers = arrayInput()
-    val mergeSort = MergeSortAlgorithm()
-    val result = mergeSort.mergeSort(numbers)
+    val algorithm = MergeSortAlgorithm()
+    val result = algorithm.mergeSort(numbers)
     printArray(result)
 }
 
 fun quickSortSelected() {
-    print("Please enter the list of numbers that you want to sort separated by spaces: ")
-
-    val input = readLine()!!
-    val array = input.split(" ").map { it.toInt() }.toIntArray()
-
-    quickSort(array, 0, array.size-1)
-
-    println("\nSorted array: ${array.joinToString(" ")}")
+    val numbers = arrayInput()
+    val algorithm = QuickSortAlgorithm()
+    val result = algorithm.quickSort(numbers, 0, numbers.size - 1)
+    printArray(result)
 }
 
 fun selectionSortSelected() {
